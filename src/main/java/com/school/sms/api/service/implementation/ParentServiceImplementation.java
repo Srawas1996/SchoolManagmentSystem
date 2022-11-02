@@ -1,4 +1,4 @@
-package com.school.sms.api.service.implementaion;
+package com.school.sms.api.service.implementation;
 
 import com.school.sms.api.entity.Parent;
 import com.school.sms.api.entity.Student;
@@ -8,10 +8,9 @@ import com.school.sms.api.service.ParentService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 
-public class ParentServiceImplmentaion implements ParentService {
+public class ParentServiceImplementation implements ParentService {
     @Autowired
     private ParentRepository parentRepository;
 

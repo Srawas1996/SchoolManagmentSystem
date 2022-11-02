@@ -1,4 +1,4 @@
-package com.school.sms.api.service.implementaion;
+package com.school.sms.api.service.implementation;
 
 import com.school.sms.api.entity.Parent;
 import com.school.sms.api.entity.Student;
@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-public class StudentServiceImplementaion implements StudentService {
+public class StudentServiceImplementation implements StudentService {
 
     @Autowired
     private StudentRepository studentRepository;
