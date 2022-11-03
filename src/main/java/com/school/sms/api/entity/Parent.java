@@ -19,8 +19,11 @@ public class Parent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer ParentId;
+
+
     @Column(name = "student_Id")
-    private Long studentId;
+    private int studentId;
 
     @Column(name = "father_name")
     @NotNull
