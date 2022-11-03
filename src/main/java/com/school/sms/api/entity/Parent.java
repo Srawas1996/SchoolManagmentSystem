@@ -19,7 +19,7 @@ public class Parent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer ParentId;
+    private Integer parentId;
 
 
     @Column(name = "student_Id")
@@ -41,6 +41,6 @@ public class Parent {
     @Column(unique = true,name = "Mobile")
     private Long mobileNumber;
 
-    @OneToMany
+    @OneToMany(mappedBy = "parents")
     private List<Student> students;
 }

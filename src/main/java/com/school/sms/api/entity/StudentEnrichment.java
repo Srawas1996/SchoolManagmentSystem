@@ -26,5 +26,6 @@ public class StudentEnrichment {
     private LocalDate date;
 
     @ManyToOne
+    @JoinColumn(name = "studentId")
     private Student student;
 }

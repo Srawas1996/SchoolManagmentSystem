@@ -42,7 +42,7 @@ public class Student {
     private Long mobileNumber;
 
     @ManyToOne
-    @JoinColumn(name = "ParentId")
+    @JoinColumn(name = "parentId")
     private Parent parents;
 
     @ManyToMany
@@ -53,7 +53,7 @@ public class Student {
     )
     private List<Teacher> teachers;
 
-    @OneToMany
+    @OneToMany(mappedBy = "student")
     private List<StudentEnrichment> studentEnrichment;
 
 }
