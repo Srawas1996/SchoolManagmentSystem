@@ -16,7 +16,7 @@ public interface ParentService {
     public abstract String getFatherParentName(Integer parentId);
     public abstract String getMotherParentName(Integer parentId);
     public abstract Parent updateParentInfo(Parent parent, Integer parentId);
-    public abstract void deleteParent(Parent parent);
+    public abstract void deleteParent(Integer parentId);
     public abstract List<Student> getHisChild(Integer parentId);
     public abstract void addChild(Parent parent,Student student,Integer parentId);
     public abstract List<StudentEnrichment> getStudentEnrichment(Integer parentId);

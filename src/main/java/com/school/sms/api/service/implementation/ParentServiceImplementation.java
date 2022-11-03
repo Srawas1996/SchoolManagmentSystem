@@ -53,8 +53,8 @@ public class ParentServiceImplementation implements ParentService {
     }
 
     @Override
-    public void deleteParent(Parent parent) {
-        parentRepository.delete(parent);
+    public void deleteParent(Integer parentId) {
+        parentRepository.deleteById(parentId);
     }
 
     @Override
