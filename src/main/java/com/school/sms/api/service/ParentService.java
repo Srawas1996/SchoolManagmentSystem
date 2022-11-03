@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface ParentService {
 
     public abstract Parent saveParent(Parent parent);

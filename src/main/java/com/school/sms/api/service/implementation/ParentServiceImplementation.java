@@ -6,10 +6,13 @@ import com.school.sms.api.entity.StudentEnrichment;
 import com.school.sms.api.repository.ParentRepository;
 import com.school.sms.api.service.ParentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-
+@Transactional
+@Service
 public class ParentServiceImplementation implements ParentService {
     @Autowired
     private ParentRepository parentRepository;

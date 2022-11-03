@@ -8,9 +8,13 @@ import com.school.sms.api.repository.StudentRepository;
 import com.school.sms.api.service.StudentService;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Transactional
+@Service
 public class StudentServiceImplementation implements StudentService {
 
     @Autowired
@@ -43,7 +47,7 @@ public class StudentServiceImplementation implements StudentService {
                     studentToUpdate.setAge(student.getAge());
                     studentToUpdate.setMobileNumber(student.getMobileNumber());
                     studentToUpdate.setStudentEnrichment(student.getStudentEnrichment());
-                    studentToUpdate.setParents(student.getParents());
+
                     studentToUpdate.setTeachers(student.getTeachers());
                     studentToUpdate.setFirstName(student.getFirstName());
                     studentToUpdate.setLastName(student.getLastName());
@@ -55,12 +59,12 @@ public class StudentServiceImplementation implements StudentService {
 
     @Override
     public Parent getParent(Student student, Integer studentId) {
-        return studentRepository.findById(studentId).get().getParents();
+        return studentRepository.getReferenceById(studentId).getParents();
     }
 
     @Override
     public List<StudentEnrichment> getStudentEnrichment(Student student, Integer studentId) {
-        return studentRepository.findById(studentId).get().getStudentEnrichment();
+        return studentRepository.getReferenceById(studentId).getStudentEnrichment();
     }
 
     @Override

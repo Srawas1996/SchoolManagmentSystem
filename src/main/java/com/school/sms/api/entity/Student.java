@@ -42,6 +42,7 @@ public class Student {
     private Long mobileNumber;
 
     @ManyToOne
+    @JoinColumn(name = "ParentId")
     private Parent parents;
 
     @ManyToMany

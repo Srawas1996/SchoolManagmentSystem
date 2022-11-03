@@ -15,7 +15,7 @@ import java.util.List;
 @RequestMapping(value = "/SchoolManagementSystem/Parent", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ParentController {
 
-    @Autowired
+    @Autowired(required = true)
     private ParentService parentService;
 
     @GetMapping(value = "/parentList")

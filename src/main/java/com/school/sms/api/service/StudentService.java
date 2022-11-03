@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface StudentService {
 
     public abstract Student saveStudent(Student student);

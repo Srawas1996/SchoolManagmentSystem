@@ -6,9 +6,14 @@ import com.school.sms.api.entity.Teacher;
 import com.school.sms.api.repository.TeacherRepository;
 import com.school.sms.api.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+
+@Transactional
+@Service
 public class TeacherServiceImplementation implements TeacherService {
     @Autowired
     private TeacherRepository teacherRepository;

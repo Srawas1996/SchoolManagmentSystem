@@ -6,10 +6,13 @@ import com.school.sms.api.repository.StudentEnrichmentRepository;
 import com.school.sms.api.service.StudentEnrichmentService;
 import com.school.sms.api.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-
+@Transactional
+@Service
 public class StudentEnrichmentServiceImplementaion implements StudentEnrichmentService {
     @Autowired
     StudentEnrichmentRepository studentEnrichmentRepository;
