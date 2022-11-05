@@ -22,9 +22,6 @@ public class Parent {
     private Integer parentId;
 
 
-    @Column(name = "student_Id")
-    private int studentId;
-
     @Column(name = "father_name")
     @NotNull
     @NotBlank
